@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './TodoList.css';
 
 class TodoList extends Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class TodoList extends Component {
           <input ref={(a)=>this._inputText=a} placeholder="添加一个任务" />
           <button type="button" onClick={this.addItem}>添加</button>
         </div>
-        <ul>
+        <ul class="items">
           {
             items.map(item=>
               <li key={item.key}>{item.text}</li>  
