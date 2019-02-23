@@ -12,18 +12,20 @@ class TodoList extends Component {
   // 点击按钮添加任务
   addItem() {
     let CurrentText = this.state.items;
+    let inputText = this._inputText;
     CurrentText.push({
-      text: this._inputText.value,
+      text: inputText.value,
       key: Date.now()
     });
     this.setState({
       items: CurrentText
     });
-    this._inputText.value = '';
-    this._inputText.focus();
+    inputText.value = '';
+    inputText.focus();
   }
 
   render() {
+    let { items } = this.state;
     return (
       <div className="TodoList">
         <div className="header">
@@ -32,7 +34,7 @@ class TodoList extends Component {
         </div>
         <ul>
           {
-            this.state.items.map(item=>
+            items.map(item=>
               <li key={item.key}>{item.text}</li>  
             )
           }
