@@ -1,12 +1,8 @@
 import React from 'react';
+
+// 可以将组件挂载到页面上
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import TodoList from './TodoList';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// 将TodoList组件加载到root里
+ReactDOM.render(<TodoList />, document.getElementById('root'));
